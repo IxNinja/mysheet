@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+* {
+    box-sizing: border-box;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
-}
+  
+  .page-actions-cont {
+    height: 3rem;
+    background-color: #218c74;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  
+  .page-action {
+    width: 5rem;
+    height: 2rem;
+    text-align: center;
+    color: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .page-action:hover {
+    background-color: #2ecc71;
+  }
+  
+  .grid-cont {
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+    background-color: #ecf0f1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  
+  .cell {
+    min-width: 100px;
+    min-height: 40px;
+    padding: 0.5rem;
+    border: 1px solid lightgrey;
+    overflow: hidden;
+  }
+  
+  .cell:focus {
+    outline: none;
+    border: 1px solid #3498db;
+    background-color: #f7f7f7;
+  }
+  
+  .formula-actions-cont {
+    height: 2rem;
+    background-color: #ecf0f1;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .address-bar {
+    width: 5rem;
+    text-align: center;
+  }
+  
+  .formula-bar {
+    flex: 1;
+    height: 100%;
+    border: 1px solid lightgrey;
+    padding: 0.5rem;
+  }
+  
+  .cellprop-actions-cont {
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  
+  .cell-prop {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .color-prop {
+    position: relative;
+    margin-right: 0.5rem;
+  }
+  
+  .color-prop > input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .active {
+    color: #2ecc71;
+  }
+  
+  .sheet-actions-cont {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap: 1rem;
+    background-color: #ecf0f1;
+  }
+  
+  .sheet-add-icon {
+    cursor: pointer;
+  }
+  
+  .sheet-add-icon:hover {
+    color: #2ecc71;
+  }
+  
+  .open-save {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .open-save label,
+  .open-save .page-action {
+    cursor: pointer;
+  }
+  
+  .open-save input {
+    display: none;
+  }
+  
